@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BF7A02D16471AA400F0D24C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF7A02C16471AA400F0D24C /* UIKit.framework */; };
+		3BF7A02F16471AA400F0D24C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF7A02E16471AA400F0D24C /* Foundation.framework */; };
+		3BF7A03116471AA400F0D24C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF7A03016471AA400F0D24C /* CoreGraphics.framework */; };
+		3BF7A03716471AA400F0D24C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BF7A03516471AA400F0D24C /* InfoPlist.strings */; };
+		3BF7A03916471AA400F0D24C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF7A03816471AA400F0D24C /* main.m */; };
+		3BF7A03D16471AA400F0D24C /* GHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF7A03C16471AA400F0D24C /* GHAppDelegate.m */; };
+		3BF7A03F16471AA400F0D24C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF7A03E16471AA400F0D24C /* Default.png */; };
+		3BF7A04116471AA400F0D24C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF7A04016471AA400F0D24C /* Default@2x.png */; };
+		3BF7A04316471AA400F0D24C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF7A04216471AA400F0D24C /* Default-568h@2x.png */; };
+		3BF7A04616471AA400F0D24C /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BF7A04416471AA400F0D24C /* MainStoryboard_iPhone.storyboard */; };
+		3BF7A04916471AA400F0D24C /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BF7A04716471AA400F0D24C /* MainStoryboard_iPad.storyboard */; };
+		3BF7A04C16471AA400F0D24C /* GHMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF7A04B16471AA400F0D24C /* GHMasterViewController.m */; };
+		3BF7A04F16471AA400F0D24C /* GHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF7A04E16471AA400F0D24C /* GHDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3BF7A02816471AA400F0D24C /* Graticule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graticule.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BF7A02C16471AA400F0D24C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3BF7A02E16471AA400F0D24C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3BF7A03016471AA400F0D24C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3BF7A03416471AA400F0D24C /* Graticule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Graticule-Info.plist"; sourceTree = "<group>"; };
+		3BF7A03616471AA400F0D24C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3BF7A03816471AA400F0D24C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3BF7A03A16471AA400F0D24C /* Graticule-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Graticule-Prefix.pch"; sourceTree = "<group>"; };
+		3BF7A03B16471AA400F0D24C /* GHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHAppDelegate.h; sourceTree = "<group>"; };
+		3BF7A03C16471AA400F0D24C /* GHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHAppDelegate.m; sourceTree = "<group>"; };
+		3BF7A03E16471AA400F0D24C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3BF7A04016471AA400F0D24C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3BF7A04216471AA400F0D24C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3BF7A04516471AA400F0D24C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		3BF7A04816471AA400F0D24C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		3BF7A04A16471AA400F0D24C /* GHMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHMasterViewController.h; sourceTree = "<group>"; };
+		3BF7A04B16471AA400F0D24C /* GHMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHMasterViewController.m; sourceTree = "<group>"; };
+		3BF7A04D16471AA400F0D24C /* GHDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHDetailViewController.h; sourceTree = "<group>"; };
+		3BF7A04E16471AA400F0D24C /* GHDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BF7A02516471AA400F0D24C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BF7A02D16471AA400F0D24C /* UIKit.framework in Frameworks */,
+				3BF7A02F16471AA400F0D24C /* Foundation.framework in Frameworks */,
+				3BF7A03116471AA400F0D24C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BF7A01D16471AA400F0D24C = {
+			isa = PBXGroup;
+			children = (
+				3BF7A03216471AA400F0D24C /* Graticule */,
+				3BF7A02B16471AA400F0D24C /* Frameworks */,
+				3BF7A02916471AA400F0D24C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3BF7A02916471AA400F0D24C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BF7A02816471AA400F0D24C /* Graticule.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BF7A02B16471AA400F0D24C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BF7A02C16471AA400F0D24C /* UIKit.framework */,
+				3BF7A02E16471AA400F0D24C /* Foundation.framework */,
+				3BF7A03016471AA400F0D24C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BF7A03216471AA400F0D24C /* Graticule */ = {
+			isa = PBXGroup;
+			children = (
+				3BF7A03B16471AA400F0D24C /* GHAppDelegate.h */,
+				3BF7A03C16471AA400F0D24C /* GHAppDelegate.m */,
+				3BF7A04416471AA400F0D24C /* MainStoryboard_iPhone.storyboard */,
+				3BF7A04716471AA400F0D24C /* MainStoryboard_iPad.storyboard */,
+				3BF7A04A16471AA400F0D24C /* GHMasterViewController.h */,
+				3BF7A04B16471AA400F0D24C /* GHMasterViewController.m */,
+				3BF7A04D16471AA400F0D24C /* GHDetailViewController.h */,
+				3BF7A04E16471AA400F0D24C /* GHDetailViewController.m */,
+				3BF7A03316471AA400F0D24C /* Supporting Files */,
+			);
+			path = Graticule;
+			sourceTree = "<group>";
+		};
+		3BF7A03316471AA400F0D24C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BF7A03416471AA400F0D24C /* Graticule-Info.plist */,
+				3BF7A03516471AA400F0D24C /* InfoPlist.strings */,
+				3BF7A03816471AA400F0D24C /* main.m */,
+				3BF7A03A16471AA400F0D24C /* Graticule-Prefix.pch */,
+				3BF7A03E16471AA400F0D24C /* Default.png */,
+				3BF7A04016471AA400F0D24C /* Default@2x.png */,
+				3BF7A04216471AA400F0D24C /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BF7A02716471AA400F0D24C /* Graticule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BF7A05216471AA400F0D24C /* Build configuration list for PBXNativeTarget "Graticule" */;
+			buildPhases = (
+				3BF7A02416471AA400F0D24C /* Sources */,
+				3BF7A02516471AA400F0D24C /* Frameworks */,
+				3BF7A02616471AA400F0D24C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Graticule;
+			productName = Graticule;
+			productReference = 3BF7A02816471AA400F0D24C /* Graticule.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BF7A01F16471AA400F0D24C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GH;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Wil Gieseler";
+			};
+			buildConfigurationList = 3BF7A02216471AA400F0D24C /* Build configuration list for PBXProject "Graticule" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3BF7A01D16471AA400F0D24C;
+			productRefGroup = 3BF7A02916471AA400F0D24C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BF7A02716471AA400F0D24C /* Graticule */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BF7A02616471AA400F0D24C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BF7A03716471AA400F0D24C /* InfoPlist.strings in Resources */,
+				3BF7A03F16471AA400F0D24C /* Default.png in Resources */,
+				3BF7A04116471AA400F0D24C /* Default@2x.png in Resources */,
+				3BF7A04316471AA400F0D24C /* Default-568h@2x.png in Resources */,
+				3BF7A04616471AA400F0D24C /* MainStoryboard_iPhone.storyboard in Resources */,
+				3BF7A04916471AA400F0D24C /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BF7A02416471AA400F0D24C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BF7A03916471AA400F0D24C /* main.m in Sources */,
+				3BF7A03D16471AA400F0D24C /* GHAppDelegate.m in Sources */,
+				3BF7A04C16471AA400F0D24C /* GHMasterViewController.m in Sources */,
+				3BF7A04F16471AA400F0D24C /* GHDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3BF7A03516471AA400F0D24C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BF7A03616471AA400F0D24C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3BF7A04416471AA400F0D24C /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BF7A04516471AA400F0D24C /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		3BF7A04716471AA400F0D24C /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BF7A04816471AA400F0D24C /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3BF7A05016471AA400F0D24C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BF7A05116471AA400F0D24C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3BF7A05316471AA400F0D24C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Graticule/Graticule-Prefix.pch";
+				INFOPLIST_FILE = "Graticule/Graticule-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3BF7A05416471AA400F0D24C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Graticule/Graticule-Prefix.pch";
+				INFOPLIST_FILE = "Graticule/Graticule-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BF7A02216471AA400F0D24C /* Build configuration list for PBXProject "Graticule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BF7A05016471AA400F0D24C /* Debug */,
+				3BF7A05116471AA400F0D24C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BF7A05216471AA400F0D24C /* Build configuration list for PBXNativeTarget "Graticule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BF7A05316471AA400F0D24C /* Debug */,
+				3BF7A05416471AA400F0D24C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BF7A01F16471AA400F0D24C /* Project object */;
+}
