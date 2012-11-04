@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B64CFB516471EA300489A22 /* GHMeetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B64CFB416471EA300489A22 /* GHMeetup.m */; };
+		3B64CFB81647205900489A22 /* GHGeohash.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B64CFB71647205900489A22 /* GHGeohash.m */; };
+		3B64CFBB1647266B00489A22 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B64CFBA1647266B00489A22 /* NSString+MD5.m */; };
+		3B64CFBD1647290300489A22 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B64CFBC1647290300489A22 /* CoreLocation.framework */; };
 		3BF7A02D16471AA400F0D24C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF7A02C16471AA400F0D24C /* UIKit.framework */; };
 		3BF7A02F16471AA400F0D24C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF7A02E16471AA400F0D24C /* Foundation.framework */; };
 		3BF7A03116471AA400F0D24C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF7A03016471AA400F0D24C /* CoreGraphics.framework */; };
@@ -23,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B64CFB316471EA300489A22 /* GHMeetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHMeetup.h; sourceTree = "<group>"; };
+		3B64CFB416471EA300489A22 /* GHMeetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHMeetup.m; sourceTree = "<group>"; };
+		3B64CFB61647205900489A22 /* GHGeohash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGeohash.h; sourceTree = "<group>"; };
+		3B64CFB71647205900489A22 /* GHGeohash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGeohash.m; sourceTree = "<group>"; };
+		3B64CFB91647266B00489A22 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		3B64CFBA1647266B00489A22 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		3B64CFBC1647290300489A22 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3BF7A02816471AA400F0D24C /* Graticule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graticule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BF7A02C16471AA400F0D24C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3BF7A02E16471AA400F0D24C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -49,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B64CFBD1647290300489A22 /* CoreLocation.framework in Frameworks */,
 				3BF7A02D16471AA400F0D24C /* UIKit.framework in Frameworks */,
 				3BF7A02F16471AA400F0D24C /* Foundation.framework in Frameworks */,
 				3BF7A03116471AA400F0D24C /* CoreGraphics.framework in Frameworks */,
@@ -61,6 +73,7 @@
 		3BF7A01D16471AA400F0D24C = {
 			isa = PBXGroup;
 			children = (
+				3B64CFBC1647290300489A22 /* CoreLocation.framework */,
 				3BF7A03216471AA400F0D24C /* Graticule */,
 				3BF7A02B16471AA400F0D24C /* Frameworks */,
 				3BF7A02916471AA400F0D24C /* Products */,
@@ -97,6 +110,12 @@
 				3BF7A04D16471AA400F0D24C /* GHDetailViewController.h */,
 				3BF7A04E16471AA400F0D24C /* GHDetailViewController.m */,
 				3BF7A03316471AA400F0D24C /* Supporting Files */,
+				3B64CFB316471EA300489A22 /* GHMeetup.h */,
+				3B64CFB416471EA300489A22 /* GHMeetup.m */,
+				3B64CFB61647205900489A22 /* GHGeohash.h */,
+				3B64CFB71647205900489A22 /* GHGeohash.m */,
+				3B64CFB91647266B00489A22 /* NSString+MD5.h */,
+				3B64CFBA1647266B00489A22 /* NSString+MD5.m */,
 			);
 			path = Graticule;
 			sourceTree = "<group>";
@@ -187,6 +206,9 @@
 				3BF7A03D16471AA400F0D24C /* GHAppDelegate.m in Sources */,
 				3BF7A04C16471AA400F0D24C /* GHMasterViewController.m in Sources */,
 				3BF7A04F16471AA400F0D24C /* GHDetailViewController.m in Sources */,
+				3B64CFB516471EA300489A22 /* GHMeetup.m in Sources */,
+				3B64CFB81647205900489A22 /* GHGeohash.m in Sources */,
+				3B64CFBB1647266B00489A22 /* NSString+MD5.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +335,7 @@
 				3BF7A05416471AA400F0D24C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

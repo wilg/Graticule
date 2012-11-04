@@ -7,6 +7,7 @@
 //
 
 #import "GHDetailViewController.h"
+#import "GHGeohash.h"
 
 @interface GHDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -36,7 +37,10 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        
+        GHGeohash *geohash = [GHGeohash currentMeetupForStartLocation:CLLocationCoordinate2DMake(34.04234, -118.329042)];
+        
+        self.detailDescriptionLabel.text = [geohash description];
     }
 }
 
