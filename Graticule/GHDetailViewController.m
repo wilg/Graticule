@@ -36,12 +36,14 @@
 {
     // Update the user interface for the detail item.
 
-    if (self.detailItem) {
-        
-        GHGeohash *geohash = [GHGeohash currentMeetupForStartLocation:CLLocationCoordinate2DMake(34.04234, -118.329042)];
-        
-        self.detailDescriptionLabel.text = [geohash description];
-    }
+//    if (self.geohash) {
+//                
+//        [self.map addAnnotation:self.geohash];
+//        //[self.map setRegion:MKCoordinateRegionMake(geohash.destination, MKCoordinateSpanMake(1, 1))];
+////        [self.map setCenterCoordinate:self.map.userLocation.location.coordinate animated:YES];
+//        
+//        self.detailDescriptionLabel.text = [self.geohash description];
+//    }
 }
 
 - (void)viewDidLoad
@@ -55,6 +57,47 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+//- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+//    NSLog(@"Updated: %@", map.centerCoordinate);
+    GHGeohash *newGeohash = [GHGeohash currentMeetupForStartLocation:self.map.centerCoordinate];
+    GHGeohash *previousGeohash = self.geohash;
+    self.geohash = newGeohash;
+    
+    NSLog(@"Geohash: %@", newGeohash);
+    if (!previousGeohash || ![previousGeohash sharesGraticuleWith:newGeohash]) {
+        if (previousGeohash)
+            [self.map removeAnnotation: previousGeohash];
+        [self.map addAnnotation: self.geohash];
+
+        if (self.graticuleOverlay)
+            [self.map removeOverlay:self.graticuleOverlay];
+        self.graticuleOverlay = [self.geohash boundingPolygon];
+        [self.map addOverlay:self.graticuleOverlay];
+
+        self.detailDescriptionLabel.text = [self.geohash description];
+    }
+//    if (!self.geohash) {
+//        [self.map setRegion:MKCoordinateRegionMake(newGeohash.destination, MKCoordinateSpanMake(1, 1))];
+//    }
+//    self.geohash = newGeohash;
+}
+
+- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
+{
+    if ([overlay isKindOfClass:[MKPolygon class]])
+    {
+        MKPolygonView*    aView = [[MKPolygonView alloc] initWithPolygon:(MKPolygon*)overlay];
+        
+        aView.fillColor = [[UIColor cyanColor] colorWithAlphaComponent:0.2];
+        aView.strokeColor = [[UIColor blueColor] colorWithAlphaComponent:0.7];
+        aView.lineWidth = 3;
+        aView.alpha=.3; // This line is changing transparancy level of overlay
+        return aView;
+    }
+    return nil;
 }
 
 #pragma mark - Split view

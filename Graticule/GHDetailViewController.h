@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "GHGeohash.h"
 
-@interface GHDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface GHDetailViewController : UIViewController <UISplitViewControllerDelegate, MKMapViewDelegate>
 
 @property (strong, nonatomic) id detailItem;
 
+@property (strong, nonatomic) GHGeohash *geohash;
+@property (strong, nonatomic) GHGeohash *previousGeohash;
+@property (strong, nonatomic) MKPolygon *graticuleOverlay;
+
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet MKMapView *map;
 @end

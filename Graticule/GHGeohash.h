@@ -7,7 +7,14 @@
 //
 
 #import "GHMeetup.h"
+#import <MapKit/MapKit.h>
 
-@interface GHGeohash : GHMeetup
+@interface GHGeohash : GHMeetup <MKAnnotation>
+
+@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic, readonly) NSString* title;
+
+-(MKPolygon *)boundingPolygon;
+-(BOOL)sharesGraticuleWith:(GHMeetup *)meetup;
 
 @end
