@@ -31,33 +31,49 @@
     return [dowString floatValue];
 }
 
--(NSUInteger)integerFromHexString:(NSString *)string {
-    NSUInteger result = 0;
-    NSScanner *scanner = [NSScanner scannerWithString:string];
-    
-    [scanner setScanLocation:0]; // bypass '#' character
-    [scanner scanHexInt:&result];
-    
-    return result;
+-(long double)decimalFractionFromHexadecimalFraction:(NSString *)hexFracPart {
+    int fracLen = [hexFracPart length];
+    int myLen = fracLen - 1;
+    long double sum = 0;
+    for (int i = 0; i < myLen; i++) {
+        unsigned int numSixteenths;
+        [[NSScanner scannerWithString:[hexFracPart substringWithRange:NSMakeRange(i, 1)]] scanHexInt:&numSixteenths];
+        long double conversionFactor = (long double)1.0 / pow((long double)16, (long double)(i + 1));
+        sum = sum + numSixteenths * conversionFactor;
+    }
+    return sum;
 }
 
 - (CLLocationCoordinate2D)destinationForStartLocation:(CLLocationCoordinate2D)location date:(NSDate *)date {
+//    NSLog(@"------");
     float dow = [self dowStartForDate:date];
-    NSInteger latBase = floor(location.latitude);
-    NSInteger lngBase = floor(location.longitude);
+    long double latBase = floor(location.latitude);
+    long double lngBase = floor(location.longitude);
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
 
-    NSString *md5 = [[NSString stringWithFormat:@"%@-%.2f", [dateFormat stringFromDate:date], dow] md5];
+    NSString *prehash = [NSString stringWithFormat:@"%@-%.2f", [dateFormat stringFromDate:date], dow];
+//    NSLog(@"prehash: %@", prehash);
+    NSString *md5 = [prehash md5];
+//    NSLog(@"MD5: %@", md5);
     NSString *part1 = [md5 substringWithRange:NSMakeRange(0, 16)];
-    NSString *part2 = [md5 substringWithRange:NSMakeRange(15, 16)];
+    NSString *part2 = [md5 substringWithRange:NSMakeRange(16, 16)];
+//    NSLog(@"part1: %@", part1);
+//    NSLog(@"part2: %@", part2);
+
+    long double int1 = [self decimalFractionFromHexadecimalFraction:part1];
+    long double int2 = [self decimalFractionFromHexadecimalFraction:part2];
+//    NSLog(@"int1: %Lf", int1);
+//    NSLog(@"int2: %Lf", int2);
     
-    NSUInteger int1 = [self integerFromHexString:part1];
-    NSUInteger int2 = [self integerFromHexString:part2];
-    
-    CLLocationDegrees newLat = [[NSString stringWithFormat:@"%i.%i", latBase, int1] doubleValue];
-    CLLocationDegrees newLng = [[NSString stringWithFormat:@"%i.%i", lngBase, int2] doubleValue];
+    if (latBase < 0)
+        int1 = int1 * -1;
+    if (lngBase < 0)
+        int2 = int2 * -1;
+
+    CLLocationDegrees newLat = latBase + int1;
+    CLLocationDegrees newLng = lngBase + int2;
     
     return CLLocationCoordinate2DMake(newLat, newLng);
 }
